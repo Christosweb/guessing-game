@@ -36,7 +36,7 @@ input_value.style.display = "none"
  
  function congrats() {
     msg.innerHTML = "**CONGRATULATIONS** \n YOU HAVE WON #100 MTN AIRTIME \n 876589354889";
-    msg.style.fontSize = "30px";
+    msg.style.fontSize = "1.6em";
     times = null
     document.querySelector(".score_container").remove("time")
     isDisabled()
