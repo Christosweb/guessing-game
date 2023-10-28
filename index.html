@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:regular,italic,700,700italic" rel="stylesheet" />
+    <link rel="stylesheet" href="guessing.css">
+    <script src="guessing.js" async defer></script>
+    <title>guessing game </title>
+</head>
+<body>
+   <div class="container">
+    <h1>NUMBER GUESSING GAME</h1>
+    <p class="message"></p>
+    <p class="right_wrong"></p>
+    <div class="score_container">
+        <h4 class="score">Score: <span class="score_update">0</span></h4>
+        <h4 class="time">Time left: <span class="time_update">60s</span></h4>
+    </div>
+    <div class="inp_container">
+        <input type="number" id="number" autofocus>
+    </div>
+
+    <input type="button" value="start" id="button">
+    <input type="button" value="play again" id="btn">
+
+   </div>
+</body>
+</html>

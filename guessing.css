@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient(to bottom, red, yellow);
+   background: -moz-linear-gradient(to bottom, red, yellow);
+   background: -webkit-linear-gradient(to bottom, red, yellow);
+   width: 100%;
+   min-height: 100vh;
+}
+.container{
+    background: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:25em;
+    width: 18em;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px black;
+}
+h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    color: white;
+    font-family: "ubuntu mono";
+}
+.message{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: absolute;
+    top: 100px;
+    font-family: fantasy;
+    color: gold;
+}
+.score_container{
+    display: flex;
+    width: 100%;
+}
+.score{
+    margin-left: 10px;
+    margin-right: auto;
+}
+.time{
+    margin-right: 10px;
+}
+.score_update, .time_update{
+    vertical-align: middle;
+}
+input[type = 'number']{
+    height:40px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#button, #btn{
+   position: absolute;
+   bottom: 40px;
+   padding: 10px;
+   background-color: black;
+   color: beige;
+   text-transform: uppercase;
+}
+.comp_guess{
+    text-align: center;
+    margin-top: 10px;
+    background: red;
+    padding: 10px;
+}
+.right_wrong{
+    text-align: center;
+    background-color:red;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    display: none;
+}
