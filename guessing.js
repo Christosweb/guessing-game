@@ -36,7 +36,7 @@ input_value.style.display = "none"
  
  function congrats() {
     msg.innerHTML = "**CONGRATULATIONS** \n YOU HAVE WON #100 MTN AIRTIME \n 876589354889";
-    msg.style.fontSize = "1.3em";
+    msg.style.fontSize = "1.4em";
     times = null
     document.querySelector(".score_container").remove("time")
     isDisabled()
@@ -55,7 +55,7 @@ input_value.style.display = "none"
 
 let score = 0;
  //let times = 60;
-let msg_pass = " I'm thinking of a number between 1 and 9, guess the number and win #100 airtime "
+let msg_pass = " I'm thinking of a number between 0 and 9, guess the number and win #100 airtime "
 
 function message(){
     window.addEventListener("load", ()=>{
