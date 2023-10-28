@@ -63,7 +63,7 @@ function message(){
         for (let i = 0; i < msg_pass.length; i++) {
             setTimeout(()=>{
                 msg.innerHTML += msg_pass.charAt(i);
-            }, i * 20)       
+            }, i * 10)       
         }
     })
 }message()
@@ -82,13 +82,7 @@ function rand_num() {
   return  Math.floor( Math.random() * 10);
 }
 
-//##############################################################################################
 
-
-    
-
- 
-//##############################################################################################
  
  // create function to update random number evrytime user guess right
 
@@ -111,7 +105,31 @@ if (e.target.value == rand_number) {
    // right_wrong.style.display = "block";
    // right_wrong.style.backgroundColor = "green";
     //e.target.value = "";
-}else{
+}
+
+//check if input value is not equal to random number
+else if(e.target.value !== rand_number) {
+    msg.innerHTML = "GAME OVER";
+    msg.style.fontSize = "40px";
+    button.style.display = "none";
+    btn.style.display = "block";
+    btn.value = "PLAY AGAIN";
+    input_value.disabled = true;
+    right_wrong.innerHTML = "";
+    right_wrong.style.display = "none";
+    times = null;
+    document.querySelector(".score_container").remove("time")  
+   // isGuessed();
+   let element = document.createElement("div");
+                  element.classList.add("comp_guess");
+                  element.textContent = ` The correct number is ${rand_number}. \nYou guessed ${e.target.value}`;
+    let container_inp = document.querySelector(".inp_container");
+    container_inp.appendChild(element);
+
+    
+}
+
+else{
     right_wrong.innerHTML = `${input_value.value} is wrong. Try again`;
     right_wrong.style.display = "block";
     right_wrong.style.backgroundColor = "red";
